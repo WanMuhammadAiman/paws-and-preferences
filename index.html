@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Paws & Preferences 🐾</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Single-page app: swipe view + summary view -->
+    <div class="app">
+      <header class="app-header">
+        <h1>Paws &amp; Preferences</h1>
+        <p class="subtitle">Swipe to find your favourite kitty 🐱</p>
+      </header>
+
+      <main>
+        <!-- Swipe view (main interaction screen) -->
+        <section id="swipe-view" class="view active">
+          <div class="progress-row">
+            <span id="progress-text">Loading cats…</span>
+          </div>
+
+          <div class="card-area">
+            <div id="card" class="card">
+              <!-- Spinner shown while each image is loading -->
+              <div class="loading-overlay hidden" id="loading-overlay">
+                <div class="spinner"></div>
+              </div>
+
+              <div class="badge badge-like">✅</div>
+              <div class="badge badge-dislike">❌</div>
+              <img id="cat-image" src="" alt="Cute cat" />
+            </div>
+            <p class="hint-text">
+              Swipe <strong>right</strong> to like, <strong>left</strong> to skip.<br />
+              Or use the buttons below.
+            </p>
+          </div>
+
+          <div class="controls">
+            <button id="btn-dislike" class="btn round-btn btn-outline">
+              ❌
+            </button>
+
+            <button id="btn-like" class="btn round-btn btn-outline">✅</button>
+          </div>
+        </section>
+
+        <!-- Summary view (shown after all cats are swiped) -->
+        <section id="summary-view" class="view">
+          <div class="summary-card">
+            <h2>Summary</h2>
+            <p>
+              You liked <span id="liked-count">0</span> out of
+              <span id="total-count">0</span> cats.
+            </p>
+            <p id="no-liked-message" class="muted">
+              You didn’t like any cats this round. Try again - there’s a kitty
+              for everyone. 🐾
+            </p>
+
+            <div id="liked-grid" class="liked-grid"></div>
+
+            <button id="btn-restart" class="btn restart-btn">
+              🔄 <span>Start Again</span>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <small
+          >Images from
+          <a href="https://cataas.com/" target="_blank" rel="noreferrer"
+            >Cataas</a
+          >. Built for Netizen Experience technical task.</small
+        >
+      </footer>
+    </div>
+
+    <!-- Main app logic -->
+    <script src="app.js"></script>
+  </body>
+</html>
