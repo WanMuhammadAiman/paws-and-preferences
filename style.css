@@ -35,7 +35,7 @@ body {
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
-    background: radial-gradient(circle at top, #111827 0, #020617 50%, #000 100%);
+    background: #0b1120;
     color: var(--text);
     display: flex;
     justify-content: center;
@@ -443,16 +443,17 @@ main {
 
 /* short screens (height)      */
 @media (max-height: 740px) {
-  .card {
-    max-height: 60vh;        
+  .controls {
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+
+  .hint-text {
+    margin-top: 6px;
   }
 
   .card-area {
-    margin-bottom: 12px;     
-  }
-
-  .controls {
-    margin-top: 12px;        
+    margin-bottom: 10px;
   }
 }
 
@@ -466,5 +467,15 @@ main {
   .controls {
     margin-top: 16px;
     margin-bottom: 32px;     
+  }
+}
+
+@media (max-height: 650px) {
+  .controls {
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+  .card-area {
+    margin-bottom: 4px;
   }
 }
