@@ -1,7 +1,6 @@
 # Paws & Preferences 🐾
 
 A small web app where users swipe through cat photos and see which ones they like.  
-Built for the Netizen Experience technical task.
 
 ---
 
